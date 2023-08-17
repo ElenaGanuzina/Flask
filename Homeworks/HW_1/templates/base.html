@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>
+      {% block title %}
+      Title
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+    <div class="container-fluid" style="width: 100%; height: 100px; text-align: center; background-color: #AFEEEE">
+        <ul class="nav nav-pills justify-content-end align-items-end">
+            <li class="nav-item"><a href="http://127.0.0.1:5000" class="nav-link">Main</a></li>
+            <li class="nav-item"><a href="http://127.0.0.1:5000/clothes/" class="nav-link">Clothes</a></li>
+            <li class="nav-item"><a href="http://127.0.0.1:5000/shoes/" class="nav-link">Shoes</a></li>
+        </ul>
+    <h1>
+        {% block heading %}
+        Welcome to MyMarket!
+        {% endblock %}
+    </h1>
+    </div>
+
+    <div id="block-content">
+        {% block content %}
+        <div class="container">
+            <img src="/static/img/main.jpg" alt="Beautiful girl" style="width: 100%;">
+        </div>
+        {% endblock %}
+    </div>
+
+    <footer class ="fixed-bottom modal-footer" style="width: 100%; height: 100px; background-color: #AFEEEE">
+        <hr>
+        <p>&copy; 2023 MyMarket | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
