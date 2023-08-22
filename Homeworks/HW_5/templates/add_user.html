@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Add user
+{% endblock %}
+
+{% block content %}
+        <p><h3>Add new user</h3></p>
+        <form action="/users/add/add_form" method="post">
+            <input type='text' id="name" name='name' maxlength="50" placeholder="Name" required><br>
+            <input type='text' id="email" name='email' maxlength="100" placeholder="Email" required><br>
+            <input type='password' id="password" name='password' minlength="6" placeholder="Password" required><br>
+            <input type="submit" value="Confirm">
+        </form>
+{% endblock %}
+

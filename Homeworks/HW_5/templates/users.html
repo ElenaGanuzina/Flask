@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Users
+{% endblock %}
+
+{% block content %}
+    <table width="500" bgcolor="#9aceeb" border="1"
+    align="center" cellspacing="5" cellpadding="=5">
+        <caption><h2>Users</h2></caption>
+        <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+        </tr>
+
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+<div>
+    <form action="/users/add" method="post">
+        <button type="submit">Add user</button>
+    </form>
+</div>
+
+
+{% endblock %}
+
